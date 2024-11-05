@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <title>Wedding App</title>
+        <!-- Add jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- Add Select2 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+        <!-- Add Select2 JS -->
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <link rel="stylesheet" href="wedding.css">
+
+    </head>
+    <body>
+
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light bg-white">
+              <a class="navbar-brand" href="#">
+                <img src="https://i.ibb.co/G2FXnc1/logo.png" class="navbar-img">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">   
+                  <a class="nav-link" href="#" onclick="showSection('home')">Home</a>
+                  <a class="nav-link" href="#" onclick="showSection('blog')">Blog</a>
+                  <a class="nav-link" href="#" onclick="showSection('about')">About</a>
+                  <a class="nav-link" href="#"onclick="showSection('contact')">Contact Us</a>
+                </div>
+              </div>
+          </nav>
+        </div>
+        
+      
+        
+        <!-- ---------- HOME ---------- -->
+        <div id="home" class="section active">
+            <div class="container">
+                <div class="row"> 
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-md-12">
+                              <h1 class="headng">Welcome to<span class="colorr"> India's Largest <br>WhatsApp Wedding Community!</span></h1>
+                            </div>     
+                           <div class="col-12 col-md-6">
+                                <form action="/submit_form" method="post"> <!-- Note: server-side form handler in the action attribute -->
+                          <div class="d-flex flex-column justify-content-center">
+                                    <p class="para">To join us</p>
+                                    
+                                    <label for="name">Name</label>
+                                    <input type="text" class="p-2" id="name" name="name" required placeholder="Enter your name">
+                                    
+                                    <label for="whatsapp">Whatsapp Number</label>
+                                    <input type="text" class="p-2" id="whatsapp" name="whatsapp" required placeholder="Enter Whatsapp Number">
+                                    
+                                    <label for="email">Email ID</label>
+                                    <input type="email" class="p-2" id="email" name="email" required placeholder="Enter Email ID">
+                                    
+                                    <label for="motherTongue">Mother Tongue</label>
+                                      <select name="motherTongue" class="p-2 select" id="motherTongue" required>
+                                          <option value="" disabled selected>Choose an Option</option>
+                                          <option value="ahom">Ahom</option>
+                                          <option value="angika">Angika</option>
+                                          <option value="assamese">Assamese</option>
+                                          <option value="awadhi">Awadhi</option>
+                                          <option value="bodo">Bodo</option>
+                                          <option value="braj_bhasha">Braj Bhasha</option>
+                                          <option value="bengali">Bengali</option>
+                                          <option value="chhattisgarhi">Chhattisgarhi</option>
+                                          <option value="dogri">Dogri</option>
+                                          <option value="english">English</option>
+                                          <option value="gujarati">Gujarati</option>
+                                          <option value="haryanvi">Haryanvi</option>
+                                          <option value="himalachi">Himachali</option>
+                                          <option value="hindi">Hindi</option>
+                                          <option value="kannada">Kannada</option>
+                                          <option value="kashmiri">Kashmiri</option>
+                                          <option value="konkani">Konkani</option>
+                                          <option value="maithili">Maithili</option>
+                                          <option value="malayalam">Malayalam</option>
+                                          <option value="manipuri">Manipuri</option>
+                                          <option value="marathi">Marathi</option>
+                                          <option value="magahi">Magahi</option>
+                                          <option value="nepali">Nepali</option>
+                                          <option value="odiy">Odia</option>
+                                          <option value="punjabi">Punjabi</option>
+                                          <option value="rajasthani">Rajasthani</option>
+                                          <option value="santali">Santali</option>
+                                          <option value="sindhi">Sindhi</option>
+                                          <option value="tamil">Tamil</option>
+                                          <option value="telugu">Telugu</option>
+                                          <option value="tulu">Tulu</option>
+                                          <option value="urdu">Urdu</option>
+                                          <option value="gondi">Gondi</option>
+                                      </select>
+              
+                                    <label for="religion">Religion</label>
+                                      <select name="religion" class="p-2" id="religion" required>
+                                          <option value="" disabled selected>Choose an Option</option>
+                                          <option value="adivasi_beliefs">Adivasi Beliefs</option>
+                                          <option value="bahai_faith">Bahá'í Faith</option>
+                                          <option value="buddhism">Buddhism</option>
+                                          <option value="christianity">Christianity</option>
+                                          <option value="hinduism">Hinduism</option>
+                                          <option value="islam">Islam</option>
+                                          <option value="jainism">Jainism</option>
+                                          <option value="judaism">Judaism</option>
+                                          <option value="sanamahism">Sanamahism</option>
+                                          <option value="sarnaism">Sarnaism</option>
+                                          <option value="sikhism">Sikhism</option>
+                                          <option value="zoroastrianism">Zoroastrianism</option>
+                                          <option value="ahmadiyya">Ahmadiyya</option>
+                                          <option value="baha'i">Baha'i</option>
+                                          <option value="sufism">Sufism</option>
+                                          <option value="yazidism">Yazidism</option>
+                                          <option value="zoroastrianism">Zoroastrianism</option>
+                                          <option value="neo_hinduism">Neo-Hinduism</option>
+                                      </select>
+              
+                                      <label for="community">Community</label>
+                                      <select name="community" class="p-2" id="community" required>
+                                          <option value="" disabled selected>Choose an Option</option>
+                                          <option value="agarwal">Agarwal</option>
+                                          <option value="ahir">Ahir</option>                                        
+                                          <option value="bania">Bania</option>
+                                          <option value="bhumihar">Bhumihar</option>
+                                          <option value="chamar">Chamar</option>
+                                          <option value="jat">Jat</option>
+                                          <option value="kurmi">Kurmi</option>
+                                          <option value="lodhi">Lodhi</option>
+                                          <option value="gujar">Gujar</option>
+                                          <option value="kahar">Kahar</option>
+                                          <option value="brahmin">Brahmin</option>
+                                          <option value="rajput">Rajput</option>
+                                          <option value="kayastha">Kayastha</option>
+                                          <option value="teli">Teli</option>
+                                          <option value="chandravanshi">Chandravanshi</option>
+                                          <option value="khatik">Khatik</option>
+                                          <option value="dom">Dom</option>
+                                          <option value="badhai">Badhai</option>
+                                          <option value="nai">Nai</option>
+                                          <option value="barai">Barai</option>
+                                          <option value="koiri">Koiri</option>
+                                          <option value="mallah">Mallah</option>
+                                          <option value="saini">Saini</option>
+                                          <option value="yadav">Yadav</option>
+                                          <option value="kumhar">Kumhar</option>
+                                          <option value="valmiki">Valmiki</option>
+                                          <option value="dhobi">Dhobi</option>
+                                          <option value="thakur">Thakur</option>
+                                          <option value="sonar">Sonar</option>
+                                          <option value="halwai">Halwai</option>
+                                          <option value="bhar">Bhar</option>
+                                          <option value="paswan">Paswan</option>
+                                          <option value="bari">Bari</option>
+                                          <option value="sunar">Sunar</option>
+                                          <option value="kachhi">Kachhi</option>
+                                          <option value="sikh_khatri">Sikh Khatri</option>
+                                          <option value="pandit">Pandit</option>
+                                          <option value="gupta">Gupta</option>
+                                          <option value="pasi">Pasi</option>
+                                          <option value="rajbhar">Rajbhar</option>
+                                          <option value="chettiar">Chettiar</option>
+                                          <option value="naidu">Naidu</option>
+                                          <option value="reddy">Reddy</option>
+                              
+                  
+                                          <option value="vokkaliga">Vokkaliga</option>
+                              
+                              
+                              
+                  
+                                          <option value="gounder">Gounder</option>
+                  
+                                          <option value="lingayat">Lingayat</option>
+                  
+                  
+                                          <option value="iyer">Iyer</option>
+                  
+                                          <option value="iyengar">Iyengar</option>
+                  
+                                          <option value="nadar">Nadar</option>
+                  
+                                          <option value="balija">Balija</option>
+                  
+                                          <option value="muthuraja">Muthuraja</option>
+                  
+                                          <option value="devanga">Devanga</option>
+                  
+                                          <option value="mudaliar">Mudaliar</option>
+                  
+                                          <option value="pillai">Pillai</option>
+                  
+                                          <option value="ediga">Ediga</option>
+                  
+                                          <option value="gouda">Gouda</option>
+                  
+                                          <option value="kuruba">Kuruba</option>
+                  
+                                          <option value="kapu">Kapu</option>
+                  
+                                          <option value="kaniyars">Kaniyars</option>
+                  
+                                          <option value="paraiyar">Paraiyar</option>
+                  
+                                          <option value="thevar">Thevar</option>
+                  
+                                          <option value="vanniyar">Vanniyar</option>
+                  
+                                          <option value="uppara">Uppara</option>
+                  
+                                          <option value="pattanavar">Pattanavar</option>
+                  
+                                          <option value="vellalar">Vellalar</option>
+                  
+                                          <option value="chakali">Chakali</option>
+                  
+                  
+                                          <option value="eravallan">Eravallan</option>
+                  
+                                          <option value="idiga">Idiga</option>
+                  
+                  
+                                          <option value="maravar">Maravar</option>
+                  
+                                          <option value="thandan">Thandan</option>
+                  
+                                          <option value="thiyya">Thiyya</option>
+                  
+                                          <option value="ravuthar">Ravuthar</option>
+                  
+                                          <option value="bhumij">Bhumij</option>
+                  
+                                          <option value="tanti">Tanti</option>
+                  
+                  
+                                          <option value="tantiweavers">Tantiweavers</option>
+                  
+                                          <option value="bagdi">Bagdi</option>
+                  
+                   
+                   
+                                          <option value="dom">Dom</option>
+                  
+                   
+                                          <option value="ahom">Ahom</option>
+                  
+                          
+                          
+                                          <option value="brahmin_of_assam">Brahmin of Assam</option>
+                  
+                          
+                                          <option value="bodo">Bodo</option>
+                          
+                                          <option value="mech">Mech</option>
+                          
+                                          <option value="bedia">Bedia</option>
+                          
+                                          <option value="mahato">Mahato</option>
+                          
+                                          <option value="khandayat">Khandayat</option>
+                          
+                                          <option value="karana">Karana</option>
+                          
+                                          <option value="kaibarta">Kaibarta</option>
+                          
+                                          <option value="keot">Keot</option>
+                          
+                          
+                                          <option value="musahar">Musahar</option>
+                          
+                                          <option value="rajwar">Rajwar</option>
+                          
+                          
+                                          <option value="rajbanshi">Rajbanshi</option>
+                          
+                                          <option value="santhal">Santhal</option>
+                          
+                                          <option value="munda">Munda</option>
+                          
+                          
+                                          <option value="oraon">Oraon</option>
+                          
+                                          <option value="kharia">Kharia</option>
+                          
+                          
+                                          <option value="khond">Khond</option>
+                          
+                                          <option value="gond">Gond</option>
+                          
+                                          <option value="dimasa">Dimasa</option>
+                          
+                                          <option value="tamang">Tamang</option>
+                          
+                                          <option value="nepali_brahmin">Nepali Brahmin</option>
+                          
+                                          <option value="lepcha">Lepcha</option>
+                          
+                                          <option value="rai">Rai</option>
+  
+  
+  
+                                          <option value="Maratha">Maratha</option>
+      
+      
+                                          <option value="Kunbi">Kunbi</option>
+      
+                                          <option value="Koli">Koli</option>
+      
+                                          <option value="Bhils">Bhils</option>
+      
+                                          <option value="Meena">Meena</option>
+      
+      
+                                          <option value="Dhangar">Dhangar</option>
+      
+                                          <option value="Gadaria">Gadaria</option>
+      
+      
+                                          <option value="Gupta (Gujarat)">Gupta (Gujarat)</option>
+      
+                                          <option value="Brahmin (Maharashtra)">Brahmin (Maharashtra)</option>
+      
+      
+                                          <option value="Khatik">Khatik</option>
+      
+      
+                                          <option value="Vanjar">Vanjar</option>
+      
+                                          <option value="Bhandari">Bhandari</option>
+      
+      
+                                          <option value="Bhavsar">Bhavsar</option>
+      
+                                          <option value="Ravari">Ravari</option>
+      
+                                          <option value="Rajput (Rajasthan)">Rajput (Rajasthan)</option>
+      
+      
+                                          <option value="Kayastha (Rajasthan)">Kayastha (Rajasthan)</option>
+      
+                                          <option value="Vankar">Vankar</option>
+      
+      
+                                          <option value="Mochi">Mochi</option>
+      
+                                          <option value="Kumawat">Kumawat</option>
+      
+                                          <option value="Gadhvi">Gadhvi</option>
+      
+                                          <option value="Rabari">Rabari</option>
+      
+                                          <option value="Lohar">Lohar</option>
+      
+                                          <option value="Patel">Patel</option>
+      
+                                          <option value="Deshastha Brahmin">Deshastha Brahmin</option>
+      
+                                          <option value="Chamar (Maharashtra)">Chamar (Maharashtra)</option>
+      
+      
+                                          <option value="Shimpi">Shimpi</option>
+      
+      
+                                          <option value="Mahajan">Mahajan</option>
+      
+                                          <option value="Khadki">Khadki</option>
+      
+                                          <option value="Kunbi-Maratha">Kunbi-Maratha</option>
+      
+      
+                                          <option value="Dhangar">Dhangar</option>
+      
+                                          <option value="Mali">Mali</option>
+      
+                                          <option value="Pardeshi">Pardeshi</option>
+      
+                                          <option value="Mang">Mang</option>
+      
+                                          <option value="Kharvi">Kharvi</option>
+      
+                                          <option value="Bhutia">Bhutia</option>
+      
+                                          <option value="Chakma">Chakma</option>
+      
+      
+                                          <option value="Garasia">Garasia</option>
+      
+                                          <option value="Toda">Toda</option>
+      
+                                          <option value="Kodava">Kodava</option>
+      
+      
+      
+                                          <option value="Khasi">Khasi</option>
+      
+      
+                                          <option value="Garo">Garo</option>
+      
+  
+  
+  
+      
+                                          <option value="Naga">Naga</option>
+  
+  
+      
+  
+      
+                                          <option value="Angami">Angami</option>
+      
+      
+                                          <option value="Ao">Ao</option>
+      
+      
+                                          <option value="Biate">Biate</option>
+      
+      
+                                          <option value="Mizo">Mizo</option>
+      
+      
+                                          <option value="Sema">Sema</option>
+      
+      
+                                          <option value="Lotha">Lotha</option>
+      
+      
+                                          <option value="Phom">Phom</option>
+      
+                                          <option value="Dimasa">Dimasa</option>
+      
+      
+                                          <option value="Munda">Munda</option>
+      
+                                          <option value="Ho">Ho</option>
+      
+      
+                                          <option value="Bhil">Bhil</option>
+      
+                                          <option value="Riang">Riang</option>
+      
+      
+                                          <option value="Kuki">Kuki</option>
+      
+                                          <option value="Lushai">Lushai</option>
+      
+                                          <option value="Juang">Juang</option>
+      
+      
+                                          <option value="Kharia">Kharia</option>
+      
+                                          <option value="Baiga">Baiga</option>
+      
+      
+                                          <option value="Santhali">Santhali</option>
+      
+                                          <option value="Oraon">Oraon</option>
+      
+      
+                                          <option value="Malto">Malto</option>
+      
+                                          <option value="Kondh">Kondh</option>
+      
+                                          <option value="Gadaba">Gadaba</option>
+                                      </select>
+              
+                                      
+              
+                                    <label for="state">State</label>
+                                      <select name="state" class="p-2" id="state" required>
+                                          <option value="" disabled selected>Choose an Option</option>
+                                          <option value="andhra_pradesh">Andhra Pradesh</option>
+                                          <option value="arunachal_pradesh">Arunachal Pradesh</option>
+                                          <option value="assam">Assam</option>
+                                          <option value="bihar">Bihar</option>
+                                          <option value="chhattisgarh">Chhattisgarh</option>
+                                          <option value="goa">Goa</option>
+                                          <option value="gujarat">Gujarat</option>
+                                          <option value="haryana">Haryana</option>
+                                          <option value="himachal_pradesh">Himachal Pradesh</option>
+                                          <option value="jharkhand">Jharkhand</option>
+                                          <option value="karnataka">Karnataka</option>
+                                          <option value="kerala">Kerala</option>
+                                          <option value="madhya_pradesh">Madhya Pradesh</option>
+                                          <option value="maharashtra">Maharashtra</option>
+                                          <option value="manipur">Manipur</option>
+                                          <option value="meghalaya">Meghalaya</option>
+                                          <option value="mizoram">Mizoram</option>
+                                          <option value="nagaland">Nagaland</option>
+                                          <option value="odisha">Odisha</option>
+                                          <option value="punjab">Punjab</option>
+                                          <option value="rajasthan">Rajasthan</option>
+                                          <option value="sikkim">Sikkim</option>
+                                          <option value="tamil_nadu">Tamil Nadu</option>
+                                          <option value="telangana">Telangana</option>
+                                          <option value="tripura">Tripura</option>
+                                          <option value="uttar_pradesh">Uttar Pradesh</option>
+                                          <option value="uttarakhand">Uttarakhand</option>
+                                          <option value="west_bengal">West Bengal</option>
+                                          <option value="andaman_nicobar_islands">Andaman and Nicobar Islands</option>
+                                          <option value="chandigarh">Chandigarh</option>
+                                          <option value="dadra_nagar_haveli_daman_diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                                          <option value="delhi">Delhi</option>
+                                          <option value="lakshadweep">Lakshadweep</option>
+                                          <option value="puducherry">Puducherry</option>
+                                      </select>
+              
+              
+                                </div>
+                        
+                                <button type="submit" class="btn btn-light button">Join WhatsApp Group</button> <!-- Submit Button -->
+                                </form>
+                            </div>
+                            <div class="col-12 col-md-6 d-none d-md-block">
+                                <img src="https://i.ibb.co/WvpXnwG/wedding-jpeg.jpg" class="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+
+        <!-- ---------- Blog ---------- -->
+        <div id="blog" class="section">
+            <div class="pt-5 pb-5" id="Recent Blogs">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-12">
+                          <h1 class="MR_Trending_heading p-3"> Trending Blogs</h1>
+                      </div>
+      
+                      <div class="col-12 col-md-6">
+                          <div class="Mr_Trending_card">
+                              <div class="p-2">
+                                  <img src="https://maaofallblogs.com/wp-content/uploads/2018/07/Are-Marriages-Made-In-Heaven_-1.jpg" class="w-100"/>
+                              </div>
+                              <div class="p-3">
+                                  <h1 class="Mr_card_Trending_heading">Christian Blog</h1>
+                                  <p class="Mr_card_Trending_descrption">Marriage is intended to be a faithful, exclusive, lifelong union of a man and a woman. Committing themselves completely to each other, a Catholic husband and wife strive to sanctify each other, bring children into the world, and educate them in the Catholic way of life.</p>
+                                  <a class="trending_Read_more" href=""> Read More
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                      </svg>
+                                  </a>
+                              </div>
+      
+                          </div>
+                          
+      
+                      </div>
+      
+      
+                      <div class="col-12 col-md-6">
+                          <div class="Mr_Trending_card">
+                              <div class="p-2">
+                                  <img src="https://www.defencewardsmatrimony.com/blog/wp-content/uploads/2017/05/hindu-marriages.jpg" class="w-100"/>
+                              </div>
+                              <div class="p-3">
+                                  <h1 class="Mr_card_Trending_heading"> Hindu Blog</h1>
+                                  <p class="Mr_card_Trending_descrption">The Medieval period of Hinduism lasted from 500 to 1500 AD. Hinduism is the oldest religion which contains a wide range of tradition and culture which are followed by all the Hindus across the globe.</p>
+                                  <a class="trending_Read_more" href=""> Read More
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                      </svg>
+                                  </a>
+                              </div>
+      
+                          </div>
+                      </div>
+      
+                  </div>
+              </div>
+            </div>
+      
+            <div class="pt-5 pb-5" id="Recent Blogs">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                          <div class="Mr_Trending_card">
+                              <div class="p-2">
+                                  <img src="https://static.vecteezy.com/system/resources/thumbnails/024/075/677/small_2x/realistic-portrait-of-loving-muslim-couple-during-the-marriage-ceremony-or-eid-celebration-generative-ai-photo.jpg" class="w-100"/>
+                              </div>
+                              <div class="p-3">
+                                  <h1 class="Mr_card_Trending_heading">Muslims blog</h1>
+                                  <p class="Mr_card_Trending_descrption">In Islam, nikah (Arabic: نِكَاح, romanized: nikāḥ) is a contract exclusively between a man and woman. Both the groom and the bride are to consent to the marriage of their own free wills.</p>
+                                  <a class="trending_Read_more" href=""> Read More
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                      </svg>
+                                  </a>
+                              </div>
+      
+                          </div>
+                          
+      
+                  </div>
+      
+      
+                  <div class="col-12 col-md-6">
+                          <div class="Mr_Trending_card">
+                              <div class="p-2">
+                                  <img src="https://secretweddingblog.com/wp-content/uploads/2013/06/0543a.jpg" class="w-100"/>
+                              </div>
+                              <div class="p-3">
+                                  <h1 class="Mr_card_Trending_heading"> Sikh Blog</h1>
+                                  <p class="Mr_card_Trending_descrption">The couple will marry in front of the Guru Granth Sahib while the guests gather around the couple, usually with men on one side and women on the other.</p>
+                                  <a class="trending_Read_more" href=""> Read More
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                      </svg>
+                                  </a>
+                              </div>
+      
+                          </div>
+                  </div>
+      
+                  <div class="col-12 d-flex flex-row justify-content-end">
+                    <button class="Mr_treding_button"> view All</button>
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+  
+        </div>
+  
+  
+        <!-- ---------- About us ---------- --> 
+        <div id="about" class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-12">
+                      <div class="about_alignment">
+                          <h1 class="about_heading">About Us</h1>
+                        <div class="about_para">
+                          <p>Our Journey Together</p>
+                        <p>We first crossed paths in <strong>[year]</strong> at <strong>[location/event]</strong>, where a spark ignited between us. What started as a friendship blossomed into a beautiful love story. Over the years, we've created countless memories together—whether it’s exploring new places, enjoying cozy nights in, or simply sharing laughter over our favorite shows.</p>
+                        <p>The Proposal</p>
+                        <p>On <strong>[date]</strong>, in a moment filled with love and magic, <strong>[Partner A]</strong> proposed at <strong>[location]</strong>. It was a beautiful day, surrounded by <strong>[nature, friends, etc.]</strong>, and the answer was a resounding “yes!” From that moment on, we knew we were ready to embark on this incredible journey of marriage together.</p>
+                        <p>Why We’re Excited to Marry</p>
+                        <p>As we prepare to say "I do," we are thrilled to celebrate our love with our cherished family and friends. We believe that marriage is about partnership, support, and endless love, and we can't wait to build our future together, hand in hand.</p>
+                        <p>Thank You</p>
+                        <p>Thank you for being a part of our lives and for sharing in our special day. We are grateful for your love and support as we take this exciting step into forever.</p>    
+  
+                      </div>
+                        
+  
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+  
+        <!-- ---------- Contact us ---------- --> 
+         <div id="contact" class="section">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12 col-md-12">
+                      <div class="contact_alignment">
+                          <div class="d-flex flex-row justify-content-center">
+  
+                              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-envelope pr-3 pb-2 mail_icon" viewBox="0 0 16 16">
+                                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                              </svg>
+                              <h4 class="contact_mail">inacirclesuperwedding@gmail.com</h4>
+  
+                          </div>
+                      </div>
+  
+                  </div>
+              </div>
+          </div>
+         </div>
+  
+  
+        <script src="wedding.js"></script>   
+    
+      </body>
+  </html>
